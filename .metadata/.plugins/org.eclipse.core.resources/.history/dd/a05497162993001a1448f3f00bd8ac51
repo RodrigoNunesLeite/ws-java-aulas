@@ -1,0 +1,19 @@
+package entities;
+
+public class Student {
+	public String nome;
+	public double note1, note2, note3;
+	
+	public String finalGrade() {
+		double total     = 100.00;
+		double noteFinal = note1 + note2 + note3;
+		
+		if (notefinal >= 60.0) {
+			return String.format("%.2f","FINAL GRADE = " + noteFinal + "\n") 
+				   + "PASS";
+		} else  {
+			return "FAILED ";
+		}
+		
+	}
+}

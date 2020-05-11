@@ -1,0 +1,21 @@
+package entities;
+
+public class Employee {
+	public String name;
+	public double grossSalary;
+	public double tax;
+	
+	public void netSalary() {
+		grossSalary -= tax;
+	}
+	
+	public void increaseSalary(double percentage) {
+		grossSalary += (percentage / 100);
+	}
+	
+	public String toString() {
+		return name 
+			  + ", $ "
+			  + String.format("%.2f", grossSalary);
+	}
+}
