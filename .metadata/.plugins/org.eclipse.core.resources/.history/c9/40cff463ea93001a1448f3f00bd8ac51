@@ -63,7 +63,7 @@ public class Aula80Exec1Construtores {
 		System.out.print("Enter a deposit value: ");
 		balance = sc.nextDouble();
 		bankAccount.deposit(balance);
-		System.out.println("Updated account data:");
+		System.out.println("Account data:");
 		// O print do bankAccount retorna o toString() da classe
 		System.out.println("Account: " + bankAccount);
 		System.out.println();
@@ -71,7 +71,7 @@ public class Aula80Exec1Construtores {
 		System.out.print("Enter a withdraw value: ");
 		balance = sc.nextDouble();
 		bankAccount.withdraw(balance);
-		System.out.println("Updated account data:");
+		System.out.println("Account data:");
 		// O print do bankAccount retorna o toString() da classe
 		System.out.println("Account: " + bankAccount);
 		

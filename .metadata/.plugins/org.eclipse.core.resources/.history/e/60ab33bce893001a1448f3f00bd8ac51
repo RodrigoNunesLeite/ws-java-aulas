@@ -13,8 +13,7 @@ public class BankAccount {
 	public BankAccount(int numberAccount, String name, double balance) {
 		this.numberAccount = numberAccount;
 		this.name = name;
-		// this.balance = balance;
-		deposit(balance);
+		this.balance = balance;
 	}
 	
 	public long getNumberAccount() {
