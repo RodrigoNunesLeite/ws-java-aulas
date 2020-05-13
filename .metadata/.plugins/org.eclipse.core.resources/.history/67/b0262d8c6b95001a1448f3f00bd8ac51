@@ -53,10 +53,6 @@ public class Aula97Exerc1_Matrizes {
 							System.out.println("Left: " + mat[i][j - 1]);
 						}
 					}
-					/*
-					 * Nas validações precisei usar - 1 para comparar, porque o length é 4, 
-					 * mas o valor máximo que a posição ocupa é 3 para coluna e 2 para linha
-					 * */
 					if(j < (mat[i].length - 1)) { 
 						if (mat[i][j + 1] != null) {
 							System.out.println("Right: " + mat[i][j + 1]);
