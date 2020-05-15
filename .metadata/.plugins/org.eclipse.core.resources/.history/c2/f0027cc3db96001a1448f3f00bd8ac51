@@ -1,0 +1,37 @@
+package entities;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import entities.enums.OrderStatus;
+
+public class Order {
+	private Date moment;
+	private OrderStatus status;
+	
+	private List<OrderItem> listOrder = new ArrayList<>();
+	
+	public Order() {
+		
+	}
+	
+	public void addItem(OrderItem item) {
+		listOrder.add(item);
+	}
+	
+	public void removeItem(OrderItem item) {
+		listOrder.remove(item);
+	}
+	
+	public Double total() {
+		Double sumTotal = 0.0;
+		
+		for(OrderItem items: listOrder) {
+			sumTotal += items.subTotal();
+		}
+		
+		return sumTotal;
+	}
+	
+}
