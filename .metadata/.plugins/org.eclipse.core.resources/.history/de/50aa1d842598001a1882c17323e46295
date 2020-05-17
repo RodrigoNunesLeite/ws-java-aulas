@@ -1,0 +1,8 @@
+package entities.exceptions;
+
+public class DomainException extends RunTimeException{
+	
+	public DomainException(String msg) {
+		super(msg);
+	}
+}
