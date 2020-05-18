@@ -1,0 +1,32 @@
+package entities.services;
+
+import entities.Contract;
+import entities.Installment;
+
+public class ContractService {
+
+	private OnlinePaymentService onlinePaymentService;
+
+	public ContractService(OnlinePaymentService onlinePaymentService) {
+		this.onlinePaymentService = onlinePaymentService;
+	}
+
+	public void processContract(Contract contract, Integer months) {
+		double eachInstallment = contract.getTotalValue() / months;
+		
+		for(int month = 1; month <= months; month ++) {
+			eachInstallment += 
+					onlinePaymentService.interest(eachInstallment, month) + 
+					onlinePaymentService.paymentFee(eachInstallment);
+					
+			Installment instalment = new Installment(dueDat, eachInstallment)
+		}
+		contract.addInstallments(installment);
+		
+	}
+	
+	
+	public Date dateInstallment() {
+		
+	}
+}
