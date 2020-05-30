@@ -1,7 +1,0 @@
-package entities;
-
-public class OrderItem {
-	private Integer quantity;
-	
-	private Product118 product = new Product118();
-}

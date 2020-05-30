@@ -1,7 +1,0 @@
-package entities;
-
-public abstract class TaxPayer {
-	private String name;
-	private Double anualIncome;
-	
-	public abstract double tax();
